@@ -9,7 +9,7 @@
         <unpackNestedArchives>false</unpackNestedArchives>
       </options>
     </properties>
-    <root id="archive" name="App-Commerce-1.0-SNAPSHOT.war">
+    <root id="archive" name="App-Commerce.war">
       <element id="artifact" artifact-name="App-Commerce:war exploded" />
     </root>
   </artifact>
