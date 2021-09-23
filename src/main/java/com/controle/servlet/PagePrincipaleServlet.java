@@ -28,12 +28,12 @@ public class PagePrincipaleServlet extends HttpServlet {
 		HttpSession session = req.getSession(true);
 		Client c = (Client) session.getAttribute("client");
 		HashMap<String, Article> allArticles = Etages.getEtages().getArticles();
-
 		req.setAttribute("articles",allArticles.values().toArray() );
-
 		this.getServletContext()
-		.getRequestDispatcher("/WEB-INF/pagePrincipale.jsp")
-		.forward(req, resp);
+				.getRequestDispatcher("/WEB-INF/pagePrincipale.jsp")
+				.forward(req, resp);
+
+
 	}
 
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) 

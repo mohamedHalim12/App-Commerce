@@ -5,11 +5,19 @@
 <head>
 <meta charset="UTF-8">
 <title>Nos Produits</title>
-    <link href ="../css/principale.css" rel="stylesheet" type="text/css">
+    <link href ="../css/navBar.css" rel="stylesheet" type="text/css">
     <link href ="../css/article.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.2/css/all.css"/>
 </head>
 <body class="body-container">
-<%@ include file="header.jsp" %>
+
+<header class="header-page">
+    <%@ include file="navBar.jsp" %>
+    <div class="chariot">
+        <a href="#" class="numberArticle"><i class="far fa-shopping-cart icone"></i>1</a>
+    </div>
+
+</header>
 
 <article class="articles-root">
     <div class="article-container">

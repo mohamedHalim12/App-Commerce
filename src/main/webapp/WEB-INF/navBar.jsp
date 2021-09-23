@@ -11,7 +11,7 @@
 
 <nav class = "nav-bar">
     <ul>
-        <li class="list-item"><a href="#">Nos Produits</a></li>
+        <li class="list-item"><a href="pagePrincipale">Nos Produits</a></li>
         <li class="list-item"><a href="#">Derniers Nouveautés</a></li>
         <li class="list-item"><a href="#">Coupons</a></li>
         <li class="list-item"><a href="#">a propos</a></li>
