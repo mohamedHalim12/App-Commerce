@@ -1,8 +1,12 @@
 package com.controle.servlet;
 
+import com.commerce.presentation.Article;
+import com.commerce.presentation.Etages;
 import com.user.Client;
 import com.user.Users;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Set;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,9 +27,15 @@ public class PagePrincipaleServlet extends HttpServlet {
 			throws ServletException, IOException {
 		HttpSession session = req.getSession(true);
 		Client c = (Client) session.getAttribute("client");
-		//session.invalidate();
+		HashMap<String, Article> allArticles = Etages.getEtages().getArticles();
+		//Article a = allArticles.get("Tomate");
+		//Object[] key =  allArticles.keySet().toArray();
 
-		//System.out.println(c.getName());
+
+
+			req.setAttribute("articles",allArticles.values().toArray() );
+
+
 		this.getServletContext()
 		.getRequestDispatcher("/WEB-INF/pagePrincipale.jsp")
 		.forward(req, resp);

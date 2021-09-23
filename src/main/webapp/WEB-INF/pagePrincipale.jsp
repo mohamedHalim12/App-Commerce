@@ -4,31 +4,27 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Menu Banque En ligne</title>
+<title>Nos Produits</title>
+    <link href ="../css/principale.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<h1>Page Principale</h1>
-	<p>
-		Bonjour 
-		<%-- <%= client.getName %> --%>
-	</p>
-	<p>Operation disponible</p>
-	<ul>
-	<!--  <%=request.getContextPath() + "/compteCourantListe"%> -->
-		<li><a href="#">
-				Comptes Courant
-			</a></li>
-		<li><a href="#">
-				Compte Epargne
-			</a></li>
-		<li><a href="#">
-				Efectuer un virement
-			</a></li>
-			<%--  --%>
-		<li><a href="<%=request.getContextPath() + "/fin"%>">
-				Quiter
-			</a></li>
-	</ul>
-	
+<%@ include file="header.jsp" %>
+
+<div class="article-container">
+    <img src="${articles[3].getUrlImage()}">
+    <div class="article-description">
+        <h1>${articles[3].getName()}</h1>
+        <p>${articles[3].getPrice()}</p>
+        <p>${articles[3].getDescription()}</p>
+
+    </div>
+</div>
+
 </body>
 </html>
+<!--
+<li><a href="<%=request.getContextPath() + "/fin"%>">
+Quiter
+</a></li>
+</ul>
+-->
