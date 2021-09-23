@@ -12,10 +12,10 @@ public class Etages {
 
         article = new Article[]{
 
-                new Article("Tomate", 5, "../image/business-plan-epicerie.jpg", "ce sont des bonnes Tomates"),
-                new Article("Banane", 10, "../image/business-plan-epicerie.jpg", "ce sont des bonnes Bananes"),
-                new Article("Avocat", 16, "../image/business-plan-epicerie.jpg", "ce sont des bonnes Avocat"),
-                new Article("Pomme", 7, "../image/business-plan-epicerie.jpg", "ce sont des bonnes Pommes")
+                new Article("Tomate", 5, "../image/articles/tomate.jpeg", "Tomates fraiche, originaire du maroc"),
+                new Article("Banane", 10, "../image/articles/tomate.jpeg", "ce sont des bonnes Bananes"),
+                new Article("Avocat", 16, "../image/articles/tomate.jpeg", "ce sont des bonnes Avocat"),
+                new Article("Pomme", 7, "../image/articles/pomme.jpeg", "Pommes saisonier !!")
         };
         for (Article a : article){
             allArticles.put(a.name, a);

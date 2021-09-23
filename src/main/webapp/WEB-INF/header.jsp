@@ -15,6 +15,5 @@
         <li class="list-item"><a href="#">Derniers Nouveautés</a></li>
         <li class="list-item"><a href="#">Coupons</a></li>
         <li class="list-item"><a href="#">a propos</a></li>
-        <li class="list-item connect"><a href="traiterLogin">Connection</a></li>
     </ul>
 </nav>
