@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body{
-	background-image: url("background.jpg");
+	background-image: url("../image/background.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
 	display: flex;
@@ -18,7 +18,7 @@ h1{
 	border : 1px solid green;
 	width:50%;
 	margin-top: 80px;
-	background-image: url("background.jpg");
+	background-image: url("../image/background.jpg");
 	/* box-shadow: 5px 5px 4px #888888; */
 	animation: mymove 5s infinite;
 }

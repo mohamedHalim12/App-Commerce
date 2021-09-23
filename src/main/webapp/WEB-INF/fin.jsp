@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>Vous etes deconnacte</h1>
-<% session.invalidate(); %>
+
 <p>
 	<a href="<%=request.getContextPath() + "/"%>">
 		Retour a la page d'acceuil</a>

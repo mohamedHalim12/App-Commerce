@@ -1,4 +1,4 @@
-package com.mabanque.presentation;
+package com.user;
 
 public class Client {
 	protected String name;

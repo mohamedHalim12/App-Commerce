@@ -1,6 +1,12 @@
-package com.mabanque.presentation;
+package com.controle.servlet;
 
+import com.commerce.presentation.Article;
+import com.commerce.presentation.Etages;
+import com.user.Client;
+import com.user.Users;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Set;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,13 +26,14 @@ public class PagePrincipaleServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
 			throws ServletException, IOException {
 		HttpSession session = req.getSession(true);
-		Client c=(Client) session.getAttribute("client");
-		//session.invalidate();
-
-		//System.out.println(c.getName());
+		Client c = (Client) session.getAttribute("client");
+		HashMap<String, Article> allArticles = Etages.getEtages().getArticles();
+		req.setAttribute("articles",allArticles.values().toArray() );
 		this.getServletContext()
-		.getRequestDispatcher("/WEB-INF/pagePrincipale.jsp")
-		.forward(req, resp);
+				.getRequestDispatcher("/WEB-INF/pagePrincipale.jsp")
+				.forward(req, resp);
+
+
 	}
 
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) 
