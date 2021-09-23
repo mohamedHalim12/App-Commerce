@@ -28,13 +28,8 @@ public class PagePrincipaleServlet extends HttpServlet {
 		HttpSession session = req.getSession(true);
 		Client c = (Client) session.getAttribute("client");
 		HashMap<String, Article> allArticles = Etages.getEtages().getArticles();
-		//Article a = allArticles.get("Tomate");
-		//Object[] key =  allArticles.keySet().toArray();
 
-
-
-			req.setAttribute("articles",allArticles.values().toArray() );
-
+		req.setAttribute("articles",allArticles.values().toArray() );
 
 		this.getServletContext()
 		.getRequestDispatcher("/WEB-INF/pagePrincipale.jsp")
