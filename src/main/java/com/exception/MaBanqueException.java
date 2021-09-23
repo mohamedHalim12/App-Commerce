@@ -1,4 +1,4 @@
-package com.mabanque.presentation;
+package com.exception;
 
 public class MaBanqueException extends Exception {
 	/**

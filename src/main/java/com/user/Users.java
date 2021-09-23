@@ -1,13 +1,15 @@
-package com.mabanque.presentation;
+package com.user;
+import com.exception.MaBanqueException;
+
 import java.util.HashMap;
 
-public class MaBanque {
-	private static final MaBanque banque = new MaBanque();
+public class Users {
+	private static final Users user = new Users();
 	
-	private HashMap<String, Client> clients;
+	private final HashMap<String, Client> clients;
 	
-	private MaBanque() {
-		clients = new HashMap<String, Client>();
+	private Users() {
+		clients = new HashMap<>();
 		Client [] client = { 
 				new Client("ahmed", "password1"),
 				new Client("ali", "password2"),
@@ -20,8 +22,8 @@ public class MaBanque {
 		}
 	}
 	
-	public static MaBanque getInstance() {
-		return banque;
+	public static Users getInstance() {
+		return user;
 	}
 	public Client findClient(String name, String passwd) throws MaBanqueException {
 		if (clients.containsKey(name)) {
@@ -29,8 +31,8 @@ public class MaBanque {
 			if (client.password.equals(passwd)) {
 				return client;
 			}
-			throw new MaBanqueException("mot de passe incorect");
+			throw new MaBanqueException("mot de passe incorrect");
 		}	
-		throw new MaBanqueException("client non trouvé");
+		throw new MaBanqueException("client non trouve");
 	}
 }

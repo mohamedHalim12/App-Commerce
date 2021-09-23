@@ -2,17 +2,17 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
   <!-- <display-name>tp1_JEE</display-name> -->
 <servlet>
-	<servlet-name>traiterLogin</servlet-name>
-	<servlet-class>com.mabanque.presentation.TraiterLoginServlet</servlet-class>
+	<servlet-name>TraiterLogin</servlet-name>
+	<servlet-class>com.controle.servlet.TraiterLogin</servlet-class>
 </servlet>
 <servlet-mapping>
-	<servlet-name>traiterLogin</servlet-name>
+	<servlet-name>TraiterLogin</servlet-name>
 	<url-pattern>/traiterLogin</url-pattern>
 </servlet-mapping>
 
 <servlet>
 	<servlet-name>pagePrincipale</servlet-name>
-	<servlet-class>com.mabanque.presentation.PagePrincipaleServlet</servlet-class>
+	<servlet-class>com.controle.servlet.PagePrincipaleServlet</servlet-class>
 </servlet>
 <servlet-mapping>
 	<servlet-name>pagePrincipale</servlet-name>
@@ -21,7 +21,7 @@
 
 <servlet>
 	<servlet-name>FinServlet</servlet-name>
-	<servlet-class>com.mabanque.presentation.FinServlet</servlet-class>
+	<servlet-class>com.controle.servlet.FinServlet</servlet-class>
 </servlet>
 <servlet-mapping>
 	<servlet-name>FinServlet</servlet-name>
@@ -30,7 +30,7 @@
 
 <servlet>
 	<servlet-name>Error</servlet-name>
-	<servlet-class>com.mabanque.presentation.ErreurServlet</servlet-class>
+	<servlet-class>com.controle.servlet.ErreurServlet</servlet-class>
 </servlet>
 <servlet-mapping>
 	<servlet-name>Error</servlet-name>

@@ -1,4 +1,8 @@
-package com.mabanque.presentation;
+package com.controle.servlet;
+
+import com.user.Client;
+import com.user.Users;
+import com.exception.MaBanqueException;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet("/TraiterLoginServlet")
+
 public class TraiterLoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -29,7 +33,7 @@ public class TraiterLoginServlet extends HttpServlet {
 		String idt = req.getParameter("identifiant");
 		String passwds = req.getParameter("motDePasse");
 		try {
-			Client c = MaBanque.getInstance().findClient(idt, passwds);
+			Client c = Users.getInstance().findClient(idt, passwds);
 			HttpSession session = req.getSession(true);
 			session.setAttribute("client", c);
 			resp.sendRedirect(req.getContextPath()+"/pagePrincipale");
