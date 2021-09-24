@@ -35,4 +35,7 @@
 .connection-item {
   background-color: #4caf50;
 }
-
+.header-page {
+  display: flex;
+  gap: .9em;
+}

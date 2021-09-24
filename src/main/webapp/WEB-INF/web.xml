@@ -24,6 +24,16 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>RecuServelet</servlet-name>
+        <servlet-class>com.controle.servlet.RecuServelet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RecuServelet</servlet-name>
+        <url-pattern>/recue</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>FinServlet</servlet-name>
         <servlet-class>com.controle.servlet.FinServlet</servlet-class>
     </servlet>

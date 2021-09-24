@@ -18,9 +18,13 @@
 
 <header class="header-page">
   <a href="/" class="iconeFontAwsome"><i class="fad fa-home icone"></i></a>
-  <%@ include file="navBar.jsp" %>
-  <a href="#" class="iconeFontAwsome numberArticle"><i
-    class="far fa-shopping-cart icone"></i>1</a>
+  <nav class="navigation">
+    <ul class="navigation-list">
+      <a href="#" class="navigation-item">Nos Produits</a>
+    </ul>
+  </nav>
+  <a href="recue" class="iconeFontAwsome numberArticle"><i
+    class="far fa-shopping-cart icone"></i><label id="quantite">1</label> </a>
 </header>
   <article class="articles-root">
     <c:forEach var="i" begin="0" end="${length-1}" step="1">
@@ -46,9 +50,10 @@
           <span class="description"> ${articles[i].getDescription()} </span>
         </p>
       </div>
-      <button class="button">Ajouter Panier</button>
+      <button class="button" data-id="${articles[i].getId()}">Ajouter Panier</button>
     </div>
     </c:forEach>
   </article>
+<script src="../Js/getData.js"></script>
 </body>
 </html>

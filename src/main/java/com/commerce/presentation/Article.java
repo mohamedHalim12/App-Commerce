@@ -1,16 +1,20 @@
 package com.commerce.presentation;
 
 public class Article {
+  protected String id;
   protected String name;
   protected String description;
   protected double price;
   protected String urlImage;
 
-  public Article(String name, double price, String urlImage, String description) {
+
+
+  public Article(String id, String name, double price, String urlImage, String description) {
     this.name = name;
     this.price = price;
     this.urlImage = urlImage;
     this.description = description;
+    this.id = id;
   }
 
   public String getName() {
@@ -28,7 +32,13 @@ public class Article {
   public void setDescription(String description) {
     this.description = description;
   }
+  public String getId() {
+    return id;
+  }
 
+  public void setId(String id) {
+    this.id = id;
+  }
   public double getPrice() {
     return price;
   }
