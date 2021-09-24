@@ -1,46 +1,48 @@
 package com.commerce.presentation;
 
 public class Article {
-    protected String name;
-    protected String description;
-    protected double price;
-    protected String urlImage;
-    public Article(String name, double price, String urlImage, String description){
-        this.name = name;
-        this.price = price;
-        this.urlImage = urlImage;
-        this.description = description;
-    }
-    public String getName() {
-        return name;
-    }
+  protected String name;
+  protected String description;
+  protected double price;
+  protected String urlImage;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+  public Article(String name, double price, String urlImage, String description) {
+    this.name = name;
+    this.price = price;
+    this.urlImage = urlImage;
+    this.description = description;
+  }
 
-    public String getDescription() {
-        return description;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+  public void setName(String name) {
+    this.name = name;
+  }
 
-    public double getPrice() {
-        return price;
-    }
+  public String getDescription() {
+    return description;
+  }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
+  public void setDescription(String description) {
+    this.description = description;
+  }
 
-    public String getUrlImage() {
-        return urlImage;
-    }
+  public double getPrice() {
+    return price;
+  }
 
-    public void setUrlImage(String urlImage) {
-        this.urlImage = urlImage;
-    }
+  public void setPrice(double price) {
+    this.price = price;
+  }
+
+  public String getUrlImage() {
+    return urlImage;
+  }
+
+  public void setUrlImage(String urlImage) {
+    this.urlImage = urlImage;
+  }
 
 }

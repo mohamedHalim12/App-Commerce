@@ -1,40 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
-  <!-- <display-name>tp1_JEE</display-name> -->
-<servlet>
-	<servlet-name>TraiterLogin</servlet-name>
-	<servlet-class>com.controle.servlet.TraiterLogin</servlet-class>
-</servlet>
-<servlet-mapping>
-	<servlet-name>TraiterLogin</servlet-name>
-	<url-pattern>/traiterLogin</url-pattern>
-</servlet-mapping>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         id="WebApp_ID" version="4.0">
+    <!-- <display-name>tp1_JEE</display-name> -->
+    <servlet>
+        <servlet-name>TraiterLogin</servlet-name>
+        <servlet-class>com.controle.servlet.TraiterLogin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TraiterLogin</servlet-name>
+        <url-pattern>/traiterLogin</url-pattern>
+    </servlet-mapping>
 
-<servlet>
-	<servlet-name>pagePrincipale</servlet-name>
-	<servlet-class>com.controle.servlet.PagePrincipaleServlet</servlet-class>
-</servlet>
-<servlet-mapping>
-	<servlet-name>pagePrincipale</servlet-name>
-	<url-pattern>/pagePrincipale</url-pattern>
-</servlet-mapping>
+    <servlet>
+        <servlet-name>pagePrincipale</servlet-name>
+        <servlet-class>com.controle.servlet.PagePrincipaleServlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>pagePrincipale</servlet-name>
+        <url-pattern>/pagePrincipale</url-pattern>
+    </servlet-mapping>
 
-<servlet>
-	<servlet-name>FinServlet</servlet-name>
-	<servlet-class>com.controle.servlet.FinServlet</servlet-class>
-</servlet>
-<servlet-mapping>
-	<servlet-name>FinServlet</servlet-name>
-	<url-pattern>/finServlet</url-pattern>
-</servlet-mapping>
+    <servlet>
+        <servlet-name>FinServlet</servlet-name>
+        <servlet-class>com.controle.servlet.FinServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FinServlet</servlet-name>
+        <url-pattern>/finServlet</url-pattern>
+    </servlet-mapping>
 
-<servlet>
-	<servlet-name>Error</servlet-name>
-	<servlet-class>com.controle.servlet.ErreurServlet</servlet-class>
-</servlet>
-<servlet-mapping>
-	<servlet-name>Error</servlet-name>
-	<url-pattern>/error</url-pattern>
-</servlet-mapping>
-
+    <servlet>
+        <servlet-name>Error</servlet-name>
+        <servlet-class>com.controle.servlet.ErreurServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Error</servlet-name>
+        <url-pattern>/error</url-pattern>
+    </servlet-mapping>
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
+        </jsp-property-group>
+    </jsp-config>
 </web-app>

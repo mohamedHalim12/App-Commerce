@@ -7,13 +7,13 @@
 --%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
+         pageEncoding="UTF-8" %>
 
-<nav class = "nav-bar">
-    <ul>
-        <li class="list-item"><a href="pagePrincipale">Nos Produits</a></li>
-        <li class="list-item"><a href="#">Derniers Nouveautés</a></li>
-        <li class="list-item"><a href="#">Coupons</a></li>
-        <li class="list-item"><a href="#">a propos</a></li>
-    </ul>
+<nav class="navigation">
+  <ul class="navigation-list">
+    <a href="pagePrincipale" class="navigation-item">Nos Produits</a>
+    <a href="#" class="navigation-item link-not-ready">Derniers Nouveautés</a>
+    <a href="#" class="navigation-item link-not-ready">Coupons</a>
+    <a href="#" class="navigation-item link-not-ready">a propos</a>
+  </ul>
 </nav>
