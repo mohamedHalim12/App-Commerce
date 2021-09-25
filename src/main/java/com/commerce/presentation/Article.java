@@ -8,7 +8,6 @@ public class Article {
   protected String urlImage;
 
 
-
   public Article(String id, String name, double price, String urlImage, String description) {
     this.name = name;
     this.price = price;
@@ -32,6 +31,7 @@ public class Article {
   public void setDescription(String description) {
     this.description = description;
   }
+
   public String getId() {
     return id;
   }
@@ -39,6 +39,7 @@ public class Article {
   public void setId(String id) {
     this.id = id;
   }
+
   public double getPrice() {
     return price;
   }

@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,8 +25,8 @@
   <a href="recue" class="iconeFontAwsome numberArticle"><i
     class="far fa-shopping-cart icone"></i><label id="quantite">1</label> </a>
 </header>
-  <article class="articles-root">
-    <c:forEach var="i" begin="0" end="${length-1}" step="1">
+<article class="articles-root">
+  <c:forEach var="i" begin="0" end="${length-1}" step="1">
     <div class="article-container">
       <div class="image-container">
         <img
@@ -50,10 +49,11 @@
           <span class="description"> ${articles[i].getDescription()} </span>
         </p>
       </div>
-      <button class="button" data-id="${articles[i].getId()}">Ajouter Panier</button>
+      <button class="button" data-id="${articles[i].getId()}">Ajouter Panier
+      </button>
     </div>
-    </c:forEach>
-  </article>
-<script src="../Js/getData.js"></script>
+  </c:forEach>
+</article>
+<script src="../Js/getData.js" type="module" async></script>
 </body>
 </html>
