@@ -23,7 +23,7 @@
     </ul>
   </nav>
   <a href="recue" class="iconeFontAwsome numberArticle"><i
-    class="far fa-shopping-cart icone"></i><label id="quantite">1</label> </a>
+    class="far fa-shopping-cart icone"></i><span id="quantite">0</span> </a>
 </header>
 <article class="articles-root">
   <c:forEach var="i" begin="0" end="${length-1}" step="1">
@@ -41,7 +41,8 @@
           <p class="price">${articles[i].getPrice()} dh</p>
           <div class="quantite-container">
             <p>Choisir quantite</p>
-            <input type="number" value="1" class="article-quantite"/>
+            <input type="number" value="1" class="article-quantite"
+                   data-id="${articles[i].getId()}"/>
           </div>
         </div>
         <p class="article-description">

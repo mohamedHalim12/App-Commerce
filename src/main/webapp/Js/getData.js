@@ -1,15 +1,26 @@
-function attachEventToBtn(btn, data) {
+function attachEventToBtn(btn, data, chariot, nombreProduit) {
   let produitConfirme = [];
   btn.addEventListener('click', (event) => {
-    const id = event.target.dataset.id;
-    if (localStorage.getItem("id")) {
-      const ids = localStorage.getItem("id");
-      produitConfirme = JSON.parse(ids)
+    const {id} = event.target.dataset;
+    const quantites = document.querySelector(`.article-quantite[data-id="${id}"]`);
+    if (localStorage.getItem("articleDetails")) {
+      const articleDetails = localStorage.getItem("articleDetails");
+      produitConfirme = JSON.parse(articleDetails)
     }
-    data?.forEach(element =>
-      element.id === id && produitConfirme.push(element.id)
-    );
-    localStorage.setItem("id", JSON.stringify([...new Set(produitConfirme)]));
+    const index = produitConfirme.findIndex(({id: aid}) => aid === id)
+    if (index !== -1) {
+      produitConfirme[index].qte = quantites?.value;
+    } else {
+      produitConfirme.push({id, qte: quantites?.value})
+    }
+
+    localStorage.setItem("articleDetails", JSON.stringify(produitConfirme));
+    if (localStorage.getItem("nombreProduit")) {
+      nombreProduit = localStorage.getItem("nombreProduit");
+    }
+    let nbProd = produitConfirme.length;
+    localStorage.setItem("nombreProduit", nbProd.toString());
+    chariot.innerText = localStorage.getItem("nombreProduit");
   })
 }
 
@@ -17,9 +28,13 @@ async function main() {
   const buttons = document.querySelectorAll(".button");
   const chariot = document.getElementById("quantite");
   let data = await getData();
-
+  let nombreProduit = 0;
+  if (localStorage.getItem("nombreProduit")) {
+    nombreProduit = localStorage.getItem("nombreProduit");
+  }
+  chariot.innerText = localStorage.getItem("nombreProduit");
   buttons.forEach(btn => {
-    attachEventToBtn(btn,  data);
+    attachEventToBtn(btn, data, chariot, nombreProduit);
   })
 }
 
