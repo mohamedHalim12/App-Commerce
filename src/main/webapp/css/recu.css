@@ -1,21 +1,24 @@
-.ul-descpition{
+.ul-descpition {
   display: flex;
   justify-content: space-around;
   gap: .5em;
 }
-.recu-information{
+
+.recu-information {
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
-.btn-invalidate{
+
+.btn-invalidate {
   padding: 10px;
   border-radius: 40%;
   background-color: lightcoral;
   cursor: not-allowed;
   color: #ffffee;
 }
-#btn-reset{
+
+#btn-reset {
   padding: 20px;
   background-color: aquamarine;
 }

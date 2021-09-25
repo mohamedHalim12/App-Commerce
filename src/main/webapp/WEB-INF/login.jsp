@@ -15,7 +15,7 @@
         href="https://pro.fontawesome.com/releases/v5.15.2/css/all.css"/>
 </head>
 <body>
-<main class="content-root">
+<main class="content-root" id="root-login">
   <header class="header-page">
     <a href="/" class="iconeFontAwsome"><i class="fad fa-home icone"></i></a>
     <nav class="navigation">
@@ -29,7 +29,7 @@
 </main>
 <div class="all">
   <h1>Connectez vous</h1>
-  <form action="<%=request.getContextPath()%>/traiterLogin" method="POST">
+  <form action="<%=request.getContextPath()%>/traiterLogin" method="POST" class="formulaire">
     <div class="connect">
       <div class="row-container">
         <label for="identif">Identifiant</label>

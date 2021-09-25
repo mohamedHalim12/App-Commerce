@@ -81,5 +81,9 @@ form {
   border: 1px solid red;
 }
 
-
-
+.formulaire{
+  overflow: auto;
+}
+#root-login{
+  height: 0;
+}
