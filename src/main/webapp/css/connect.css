@@ -85,5 +85,13 @@ form {
   overflow: auto;
 }
 #root-login{
-  height: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  align-items: center;
 }
