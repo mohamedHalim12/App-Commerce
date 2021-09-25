@@ -27,6 +27,7 @@
   <div id="recu-description" class="recu-information">
     <p>Votre recue, Merci pour votre achat !</p>
   </div>
+  <button type="button" id="btn-reset">reset local storage</button>
 </main>
 <script src="../Js/setDataToRecu.js" type="module" async></script>
 </body>

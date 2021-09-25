@@ -4,6 +4,11 @@ let dataDescription = JSON.parse(localStorage.getItem("articleDetails"));
 let data = await getData();
 let chariot = document.getElementById("link-recu");
 main(data, dataDescription);
+document.getElementById('btn-reset').addEventListener('click', () => {
+  localStorage.removeItem("nombreProduit");
+  localStorage.removeItem("articleDetails");
+  console.log("localStorage vidé !");
+})
 
 function main(data, dataDescription) {
   let quantite = document.getElementById("quantite");
@@ -14,16 +19,14 @@ function main(data, dataDescription) {
   const liTitleQte = document.createElement("li");
   const liTitlePrice = document.createElement("li");
   const liTitleInvalidate = document.createElement("li");
-
-  liTitleName.innerText="Produits";
-  liTitleQte.innerText="Quantite";
-  liTitlePrice.innerText="Prix";
-  liTitlePrice.innerText="Annulé Commande";
+  liTitleName.innerText = "Produits";
+  liTitleQte.innerText = "Quantite";
+  liTitlePrice.innerText = "Prix";
+  liTitlePrice.innerText = "Annulé Commande";
   liTitleName.classList.add("article-item");
   liTitleQte.classList.add("article-item");
   liTitlePrice.classList.add("article-item");
   liTitleInvalidate.classList.add("article-item");
-
   const ulTotal = document.createElement("ul");
   titleUl.append(liTitleName, liTitleQte, liTitlePrice);
   titleUl.classList.add("ul-descpition");
@@ -31,11 +34,11 @@ function main(data, dataDescription) {
   let total = 0;
   chariot.addEventListener('click', createRecu());
   //createRecu();
-  if(!dataDescription){
+  if (!dataDescription) {
     dataDescription = JSON.parse(localStorage.getItem("articleDetails"));
   }
-  function createRecu() {
 
+  function createRecu() {
     dataDescription.forEach((item => {
       data.forEach((donne => {
         if (item.id.toString() === donne.id.toString()) {
@@ -49,7 +52,6 @@ function main(data, dataDescription) {
           liqte.classList.add("article-item");
           liprice.classList.add("article-item");
           liBtn.classList.add("btn-invalidate");
-
           liBtn.innerText = "-";
           liName.innerText = donne.name + "---------";
           liqte.innerText = item.qte + "---------";
