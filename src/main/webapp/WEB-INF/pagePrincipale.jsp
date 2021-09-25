@@ -23,7 +23,7 @@
       </ul>
     </nav>
     <a href="recue" class="iconeFontAwsome numberArticle"><i
-      class="far fa-shopping-cart icone"></i><span id="quantite">0</span> </a>
+      class="far fa-shopping-cart icone"></i><span id="quantite"></span> </a>
   </header>
   <article class="articles-root">
     <c:forEach var="i" begin="0" end="${length-1}" step="1">

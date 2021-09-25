@@ -37,7 +37,7 @@ async function main() {
   })
 }
 
-async function getData() {
+export async function getData() {
   try {
     const res = await fetch("DataLoaded");
     if (!res.ok) {
