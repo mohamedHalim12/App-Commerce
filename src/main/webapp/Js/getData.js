@@ -13,7 +13,6 @@ function attachEventToBtn(btn, data, chariot, nombreProduit) {
     } else {
       produitConfirme.push({id, qte: quantites?.value})
     }
-
     localStorage.setItem("articleDetails", JSON.stringify(produitConfirme));
     if (localStorage.getItem("nombreProduit")) {
       nombreProduit = localStorage.getItem("nombreProduit");
