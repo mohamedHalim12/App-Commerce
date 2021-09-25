@@ -1,6 +1,6 @@
 package com.controle.servlet;
 
-import com.exception.MaBanqueException;
+import com.exception.ArticleException;
 import com.user.Client;
 import com.user.Users;
 
@@ -32,7 +32,7 @@ public class TraiterLogin extends HttpServlet {
       response.sendRedirect(request.getContextPath() + "/pagePrincipale");
 
 
-    } catch (MaBanqueException e) {
+    } catch (ArticleException e) {
       System.out.println(e.getMessage());
       request.setAttribute("error", "Identification ou mot de passe incorect");
 //			doGet(req, resp);

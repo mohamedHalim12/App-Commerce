@@ -17,3 +17,20 @@
   align-items: center;
   justify-content: center;
 }
+.main-image{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.photo{
+  height: 50%;
+  width: 50%;
+}
+.head-title{
+  color: black;
+}
+.title-description{
+  color: rebeccapurple;
+}

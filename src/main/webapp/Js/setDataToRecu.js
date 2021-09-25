@@ -8,6 +8,11 @@ document.getElementById('btn-reset').addEventListener('click', () => {
   localStorage.removeItem("nombreProduit");
   localStorage.removeItem("articleDetails");
   console.log("localStorage vidé !");
+  const balise = document.querySelectorAll(".disable-classe,.article-item");
+  balise.forEach((item=>{
+    item.innerText = "";
+  }))
+  document.getElementById("detailDescription").innerText ="";
 })
 
 function main(data, dataDescription) {
@@ -22,14 +27,13 @@ function main(data, dataDescription) {
   liTitleName.innerText = "Produits";
   liTitleQte.innerText = "Quantite";
   liTitlePrice.innerText = "Prix";
-  liTitlePrice.innerText = "Annulé Commande";
-  liTitleName.classList.add("article-item");
-  liTitleQte.classList.add("article-item");
-  liTitlePrice.classList.add("article-item");
-  liTitleInvalidate.classList.add("article-item");
+  liTitleName.classList.add("disable-classe","article-item");
+  liTitleQte.classList.add("disable-classe","article-item");
+  liTitlePrice.classList.add("disable-classe","article-item");
+  liTitleInvalidate.classList.add("disable-classe","article-item");
   const ulTotal = document.createElement("ul");
   titleUl.append(liTitleName, liTitleQte, liTitlePrice);
-  titleUl.classList.add("ul-descpition");
+  titleUl.classList.add("disable-classe","ul-descpition");
   detailDescription.append(titleUl);
   let total = 0;
   chariot.addEventListener('click', createRecu());
@@ -47,11 +51,11 @@ function main(data, dataDescription) {
           const liqte = document.createElement("li");
           const liprice = document.createElement("li");
           const liBtn = document.createElement("button");
-          ulDescription.classList.add("ul-descpition");
-          liName.classList.add("article-item");
-          liqte.classList.add("article-item");
-          liprice.classList.add("article-item");
-          liBtn.classList.add("btn-invalidate");
+          ulDescription.classList.add("disable-classe","ul-descpition");
+          liName.classList.add("disable-classe","article-item");
+          liqte.classList.add("disable-classe","article-item");
+          liprice.classList.add("disable-classe","article-item");
+          liBtn.classList.add("disable-classe","btn-invalidate");
           liBtn.innerText = "-";
           liName.innerText = donne.name + "---------";
           liqte.innerText = item.qte + "---------";
@@ -66,7 +70,8 @@ function main(data, dataDescription) {
   }
 
   const liTotal = document.createElement("li");
-  liTotal.innerText = "Total = -----------------" + total.toString()
+  liTotal.classList.add("disable-classe");
+  liTotal.innerText = "Total = ------------------------------" + total.toString()
   ulTotal.append(liTotal);
   detailDescription.append(ulTotal);
 }

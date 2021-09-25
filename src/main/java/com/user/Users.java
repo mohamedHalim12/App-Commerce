@@ -1,6 +1,6 @@
 package com.user;
 
-import com.exception.MaBanqueException;
+import com.exception.ArticleException;
 
 import java.util.HashMap;
 
@@ -27,14 +27,14 @@ public class Users {
     return user;
   }
 
-  public Client findClient(String name, String passwd) throws MaBanqueException {
+  public Client findClient(String name, String passwd) throws ArticleException {
     if (clients.containsKey(name)) {
       Client client = clients.get(name);
       if (client.password.equals(passwd)) {
         return client;
       }
-      throw new MaBanqueException("mot de passe incorrect");
+      throw new ArticleException("mot de passe incorrect");
     }
-    throw new MaBanqueException("client non trouve");
+    throw new ArticleException("client non trouve");
   }
 }
